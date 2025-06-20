@@ -1,0 +1,39 @@
+E COMMERCE WEBSITE TEMPLATE
+PALATTE (0077B6,0096C7,00B4D8,48CAE4,90E0EF,ADE8F4,CAF0F8)
+
+
+1. SIGN IN / SIGN UP PAGE
+
+2. DASHBOARD PAGE  
+    A. NAVBAR
+        a. logo
+        b. search
+        c. cart
+        d. profile
+
+    B. EXPLORE
+
+    C. HERO-SECTION
+
+    D. VIDEOS
+
+    E. CAROUSALS
+
+    F. FOOTER
+
+3. EXPLORE PAGE
+    A. OFFERS & DISCOUNT ( CAROUSAL )
+    B. OPTIONS ( T-SHIRT, PANTS, ETC )
+    C. GRID ( PHOTOS )
+    
+
+    D. EXPLORE PAGES ( FOR EACH OPTIONS )
+        A. OPTIONS ( T-SHIRT, PANTS, ETC )
+        B. GRID ( PHOTOS )
+
+4. PROFILE PAGE
+    A. NAME
+    B. EMAIL
+    C. ADDRESSES
+    D. POINTS
+
