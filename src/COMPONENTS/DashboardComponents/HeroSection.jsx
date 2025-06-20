@@ -36,7 +36,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden bg-gradient-to-r from-[#0077B6] to-[#48CAE4]">
+    <div className="relative w-full h-[800px] overflow-hidden bg-gradient-to-r ">
       {/* Carousel container */}
       <div 
         className="flex transition-transform duration-700 ease-in-out h-full"
@@ -47,47 +47,9 @@ const HeroSection = () => {
             <img 
               src={image} 
               alt={`Hero ${index + 1}`} 
-              className="w-full h-full object-contain object-center" // Changed to object-contain
+              className="w-full h-full " // Changed to object-contain
             />
           </div>
-        ))}
-      </div>
-
-      {/* Navigation arrows */}
-      <button 
-        onClick={() => {
-          prevImage();
-          resetTimer();
-        }}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button 
-        onClick={() => {
-          nextImage();
-          resetTimer();
-        }}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              setCurrentImageIndex(index);
-              resetTimer();
-            }}
-            className={`w-3 h-3 rounded-full ${currentImageIndex === index ? 'bg-white' : 'bg-white bg-opacity-50'}`}
-          />
         ))}
       </div>
     </div>
