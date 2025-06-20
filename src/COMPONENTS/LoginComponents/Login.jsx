@@ -44,11 +44,11 @@
 //               Sign Up
 //             </button>
 //           </div>
-          
+
 //           {/* Forms Container */}
 //           <div className="relative h-full min-h-[500px] overflow-hidden">
 //             {/* Sign In Form */}
-//             <div 
+//             <div
 //               className={`absolute top-0 left-0 w-full p-8 transition-all duration-500 ease-in-out ${
 //                 isActive ? "opacity-0 -translate-x-full" : "opacity-100 translate-x-0"
 //               }`}
@@ -91,7 +91,7 @@
 //             </div>
 
 //             {/* Sign Up Form */}
-//             <div 
+//             <div
 //               className={`absolute top-0 left-0 w-full p-8 transition-all duration-500 ease-in-out ${
 //                 isActive ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
 //               }`}
@@ -317,8 +317,6 @@
 
 // export default Login;
 
-
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaGoogle, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -334,8 +332,8 @@ const Login = () => {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const toggleForm = () => {
@@ -346,14 +344,14 @@ const Login = () => {
     e.preventDefault();
     // Here you would typically validate the form and send to your backend
     // For now, we'll just redirect after form submission
-    navigate('/dashboard');
+    navigate("/dashboard");
   };
 
   const handleSignUp = (e) => {
     e.preventDefault();
     // Here you would typically validate the form and send to your backend
     // For now, we'll just redirect after form submission
-    navigate('/dashboard');
+    navigate("/dashboard");
   };
 
   // Mobile layout
@@ -365,44 +363,71 @@ const Login = () => {
           <div className="flex border-b border-gray-200">
             <button
               onClick={() => setIsActive(false)}
-              className={`flex-1 py-4 font-medium ${!isActive ? 'text-[#2da0a8] border-b-2 border-[#2da0a8]' : 'text-gray-500'}`}
+              className={`flex-1 py-4 font-medium ${
+                !isActive
+                  ? "text-[#2da0a8] border-b-2 border-[#2da0a8]"
+                  : "text-gray-500"
+              }`}
             >
               Sign In
             </button>
             <button
               onClick={() => setIsActive(true)}
-              className={`flex-1 py-4 font-medium ${isActive ? 'text-[#2da0a8] border-b-2 border-[#2da0a8]' : 'text-gray-500'}`}
+              className={`flex-1 py-4 font-medium ${
+                isActive
+                  ? "text-[#2da0a8] border-b-2 border-[#2da0a8]"
+                  : "text-gray-500"
+              }`}
             >
               Sign Up
             </button>
           </div>
-          
+
           {/* Forms Container */}
           <div className="relative h-full min-h-[500px] overflow-hidden">
             {/* Sign In Form */}
-            <div 
+            <div
               className={`absolute top-0 left-0 w-full p-8 transition-all duration-500 ease-in-out ${
-                isActive ? "opacity-0 -translate-x-full" : "opacity-100 translate-x-0"
+                isActive
+                  ? "opacity-0 -translate-x-full"
+                  : "opacity-100 translate-x-0"
               }`}
-              style={{ pointerEvents: isActive ? 'none' : 'auto' }}
+              style={{ pointerEvents: isActive ? "none" : "auto" }}
             >
-              <form className="flex flex-col items-center justify-center" onSubmit={handleSignIn}>
+              <form
+                className="flex flex-col items-center justify-center"
+                onSubmit={handleSignIn}
+              >
                 <h1 className="text-2xl font-bold mb-4">Sign In</h1>
                 <div className="flex my-5">
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaGoogle className="text-gray-600" />
                   </a>
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaFacebookF className="text-gray-600" />
                   </a>
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaGithub className="text-gray-600" />
                   </a>
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaLinkedinIn className="text-gray-600" />
                   </a>
                 </div>
-                <span className="text-xs text-gray-500">or use your email password</span>
+                <span className="text-xs text-gray-500">
+                  or use your email password
+                </span>
                 <input
                   type="email"
                   placeholder="Email"
@@ -415,10 +440,13 @@ const Login = () => {
                   className="bg-gray-100 border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                   required
                 />
-                <a href="#" className="text-gray-500 text-xs my-3 hover:text-[#2da0a8]">
+                <a
+                  href="#"
+                  className="text-gray-500 text-xs my-3 hover:text-[#2da0a8]"
+                >
                   Forget Your Password?
                 </a>
-                <button 
+                <button
                   type="submit"
                   className="bg-[#2da0a8] text-white text-xs py-2.5 px-11 border border-transparent rounded-lg font-semibold uppercase tracking-wider mt-2.5 cursor-pointer hover:bg-[#238e96] transition-colors"
                 >
@@ -428,29 +456,48 @@ const Login = () => {
             </div>
 
             {/* Sign Up Form */}
-            <div 
+            <div
               className={`absolute top-0 left-0 w-full p-8 transition-all duration-500 ease-in-out ${
-                isActive ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
+                isActive
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-full"
               }`}
-              style={{ pointerEvents: !isActive ? 'none' : 'auto' }}
+              style={{ pointerEvents: !isActive ? "none" : "auto" }}
             >
-              <form className="flex flex-col items-center justify-center" onSubmit={handleSignUp}>
+              <form
+                className="flex flex-col items-center justify-center"
+                onSubmit={handleSignUp}
+              >
                 <h1 className="text-2xl font-bold mb-4">Create Account</h1>
                 <div className="flex my-5">
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaGoogle className="text-gray-600" />
                   </a>
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaFacebookF className="text-gray-600" />
                   </a>
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaGithub className="text-gray-600" />
                   </a>
-                  <a href="#" className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10">
+                  <a
+                    href="#"
+                    className="border border-gray-300 rounded-full flex justify-center items-center mx-1 w-10 h-10"
+                  >
                     <FaLinkedinIn className="text-gray-600" />
                   </a>
                 </div>
-                <span className="text-xs text-gray-500">or use your email for registration</span>
+                <span className="text-xs text-gray-500">
+                  or use your email for registration
+                </span>
                 <input
                   type="text"
                   placeholder="Name"
@@ -469,7 +516,7 @@ const Login = () => {
                   className="bg-gray-100 border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
                   required
                 />
-                <button 
+                <button
                   type="submit"
                   className="bg-[#2da0a8] text-white text-xs py-2.5 px-11 border border-transparent rounded-lg font-semibold uppercase tracking-wider mt-2.5 cursor-pointer hover:bg-[#238e96] transition-colors"
                 >
@@ -499,7 +546,10 @@ const Login = () => {
               : "left-0 w-1/2 opacity-0 z-0"
           }`}
         >
-          <form className="bg-white flex flex-col items-center justify-center px-10 h-full" onSubmit={handleSignUp}>
+          <form
+            className="bg-white flex flex-col items-center justify-center px-10 h-full"
+            onSubmit={handleSignUp}
+          >
             <h1 className="text-2xl font-bold mb-4">Create Account</h1>
             <div className="flex my-5">
               <a
@@ -546,7 +596,7 @@ const Login = () => {
               className="bg-gray-100 border-none my-2 py-2.5 px-4 text-sm rounded-lg w-full outline-none"
               required
             />
-            <button 
+            <button
               type="submit"
               className="bg-[#2da0a8] text-white text-xs py-2.5 px-11 border border-transparent rounded-lg font-semibold uppercase tracking-wider mt-2.5 cursor-pointer"
             >
@@ -561,7 +611,10 @@ const Login = () => {
             isActive ? "left-0 w-1/2 translate-x-full" : "left-0 w-1/2 z-10"
           }`}
         >
-          <form className="bg-white flex flex-col items-center justify-center px-10 h-full" onSubmit={handleSignIn}>
+          <form
+            className="bg-white flex flex-col items-center justify-center px-10 h-full"
+            onSubmit={handleSignIn}
+          >
             <h1 className="text-2xl font-bold mb-4">Sign In</h1>
             <div className="flex my-5">
               <a
@@ -605,7 +658,7 @@ const Login = () => {
             <a href="#" className="text-gray-700 text-xs my-3">
               Forget Your Password?
             </a>
-            <button 
+            <button
               type="submit"
               className="bg-[#2da0a8] text-white text-xs py-2.5 px-11 border border-transparent rounded-lg font-semibold uppercase tracking-wider mt-2.5 cursor-pointer"
             >
